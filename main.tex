@@ -1,0 +1,173 @@
+\documentclass[a4paper,8pt]{article}
+%-----------------------------------------------------------
+\usepackage[top=0.2in, bottom=0.75in, left=0.55in, right=0.85in]{geometry}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{palatino}
+\usepackage{tabularx}
+\usepackage{tabu}
+\usepackage{ragged2e}
+\usepackage{multicol}
+\fontfamily{SansSerif}
+\selectfont
+\usepackage[export]{adjustbox}
+
+\usepackage[T1]{fontenc}
+\usepackage
+%[ansinew]
+[utf8]
+{inputenc}
+
+\usepackage{color}
+\definecolor{mygrey}{gray}{0.75}
+\textheight=11.2in
+\raggedbottom
+
+\setlength{\tabcolsep}{0in}
+\newcommand{\isep}{-2 pt}
+\newcommand{\lsep}{-0.5cm}
+\newcommand{\psep}{-0.6cm}
+\renewcommand{\labelitemii}{$\circ$}
+
+\pagestyle{empty}
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\small \colorbox{mygrey}{\begin{minipage}{0.975\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[3]{
+\begin{tabular*}{6.62in}{l @{\extracolsep{\fill}} r}
+	\textsc{{\textbf{#1}}} & \textsc{\textit{[#2]}} \\
+\end{tabular*}\vspace{-8pt}}
+%-----------------------------------------------------------
+
+\begin{document}
+\hspace{0.5cm}\\[-0.2cm]
+
+\begin{minipage}{0.6\textwidth}
+\large{\textbf{Gabriel Ve Vance}} | EE17B105\\
+\indent \large{Indian Institute Of Technology, Madras}
+\end{minipage}
+\begin{minipage}{0.36\textwidth}% adapt widths of minipages to your needs
+\includegraphics[width=1.25cm,right]{iitm_logo.jpg}
+\vspace{0.5pt}
+\end{minipage}
+
+%Example of table with fixed length (tabu package required)
+
+\resheading{\textbf{ACADEMIC DETAILS} }\\[\lsep]
+\vspace{3mm}
+\begin{center}
+\hspace{6mm}
+\begin{tabu} to 0.94\textwidth { | X[c] | X[c] | X[c] | X[c] | }
+    \hline
+    \vspace{1pt}
+    \textbf{Program} \vspace{1pt}
+    & \vspace{1pt}
+ \textbf{Institution}\vspace{1pt}
+ & \vspace{1pt} \textbf{CGPA/\%} \vspace{1pt}
+ & \vspace{1pt} \textbf{Year of Completion} \vspace{1pt}
+ 
+   \\ \hline
+   
+   \vspace{1pt} Electrical Engineering \newline Dual Degree \vspace{5pt} & \vspace{5pt}IIT Madras & \vspace{5pt}7.70 & \vspace{5pt}2022 \\
+   \hline
+   \vspace{1pt} XII (CBSE)  & \vspace{1pt} \thinspace Gregorian Public School \vspace{10pt} & \vspace{1pt} 97.3\% &\vspace{1pt} 2016 \\
+   \hline
+   \vspace{1pt} X (CBSE) &  \vspace{1pt}\thinspace Gregorian Public School \vspace{10pt} & \vspace{1pt} 10 &\vspace{1pt}  2014 \\
+   \hline
+
+% adding vspace (before) after text in a row will add some space (above) below the line
+\end{tabu}
+\end{center}
+
+\resheading{\textbf{SCHOLASTIC ACHIEVEMENTS} }\\[\lsep]
+\vspace{0.6mm}
+\begin{itemize}
+    \item Achieved a rank of \textbf{707} in JEE Advanced 2017
+    \item Achieved a rank of \textbf{1700} in JEE Mains 2017
+    \item Achieved a rank of \textbf{18} in Kerala Engineering Agriculture Medical (KEAM) 2017  
+\end{itemize}
+
+\resheading{\textbf{RELEVANT COURSE WORK} }\\[\lsep]
+\vspace{0.6mm}
+\begin{itemize}
+    \item Analog Systems and Lab, Analog Circuits, Digital Systems and Lab, Digital Signal Processing, Signals and Systems, Solid State Devices, Control Engineering, Electric Circuits and Networks, Numerical Methods, Applied Linear Algebra, Analog IC Design, Communication Systems, Phase locked loops\textsuperscript{++}, Digital IC Design\textsuperscript{++}, Data Structures and Algorithms\textsuperscript{++}, Computer Methods for Electrical Engineers\textsuperscript{++}, Introduction to Machine Learning\textsuperscript{++}\\
+    \hspace*{\fill} \emph{\textsuperscript{++} - Ongoing }
+    \end{itemize}
+%\vspace{0.6mm}
+
+%SKILLS
+\resheading{\textbf{SKILLS} }\\[\lsep]
+\vspace{1mm}
+\begin{itemize}
+\item \noindent \textbf{Programming Languages - } Python , C , C++, MATLAB
+\item \noindent \textbf{Tools - } LTSpice , Eldo , Verilog
+\end{itemize}
+
+
+
+
+%PROJECTS SECTION
+\resheading{\textbf{COURSE PROJECTS} }\\[\lsep]
+\vspace{2mm}
+\begin{itemize}
+ \item \textbf{Design of a composite analog system for synchronous light and sound} \hfill \emph{(Jan-May, 2019)} \\[-0.6cm]
+	\begin{itemize}\itemsep \isep
+	\item  Design of DC-DC converter based LED driver, active band-pass filter, peak detector on breadboard
+	\item Integrated the modules in synchronisation with LED and audio amplifier
+	\item Simulated and verified the modules using LTSpice 
+	\end{itemize}
+
+\item \textbf{Fully differential amplifier design project}  \hfill \emph{(Jan-May, 2020)} \\[-0.6cm] 
+	\begin{itemize}\itemsep \isep
+	\item  Designed a custom 2-stage Miller compensated fully differential amplifier to meet the given specifications of rise time and maximum tolerable error in step response with \textbf{common-mode feedback loops}
+	\item Simulated the same using \textbf{Eldo}
+	\end{itemize}	
+
+  \item \textbf{Opamp design project}  \hfill \emph{(Aug-Nov, 2019)} \\[-0.6cm] 
+	\begin{itemize}\itemsep \isep
+	\item  Designed a custom 2-stage Miller compensated opamp to meet the given specifications of bandwidth and stability margins using \textbf{NMOS and PMOS transistor models}
+	\item Simulated the same using LTSpice
+	\end{itemize}
+	
+	
+  \item \textbf{Digital Systems lab	} \hfill \emph{(Aug-Nov, 2018)} \\[-0.6cm] 
+	\begin{itemize}\itemsep \isep
+	\item Implemented stepper motor driver using logic gates IC
+	\item Used FPGA to implement digital filters and pattern generator 
+	\end{itemize}
+\end{itemize}
+
+%POR SECTION 
+\resheading{\textbf{POSITIONS OF RESPONSIBILITY
+} }\\[\lsep]
+\vspace{1mm}
+\begin{itemize}
+    \item \textbf{Sports Secretary of Alakananda hostel 
+    }\hfill
+    \emph{(July 2019 - present)} \\[-0.6cm]
+	    \begin{itemize}\itemsep \isep
+	    \item {Elected to power by an electorate of \textbf{350 students}, managing a budget of \textbf{2 lakh}}
+	\end{itemize}
+	
+	\item \textbf{Coordinator at Facilities and Requirement , Sports Organising Committee 
+    }\hfill
+    \emph{(July, 2018 - March, 2019)} \\[-0.6cm]
+	    \begin{itemize}\itemsep \isep
+	    \item Played an active role in organising inter-college tournaments held in the institute 
+	\end{itemize}
+	
+\end{itemize}
+
+%COCURR SECTION
+\resheading{\textbf{CO-CURRICULAR AND EXTRA-CURRICULAR ACTIVITIES
+} }\\[\lsep]
+\vspace{1mm}
+
+\begin{itemize}
+\item Member of IIT Madras Sportsfest \textbf{Basketball Team } that won \textbf{gold medal}\hfill \emph{(2018-2019)} \\[-0.6cm]
+\item \textbf{Captain} of Alakananda hostel Basketball Team. \hfill \emph{(2018-2019)} \\[-0.6cm]
+\end{itemize}
+
+\end{document}
+
